@@ -165,13 +165,7 @@ main#content{
   color:var(--muted);
 }
 
-/* About */
-.about-grid{
-  display:grid;
-  grid-template-columns: 1fr 360px;
-  gap:20px;
-  align-items:center;
-}
+
 
 /* --- About Hero Photo --- */
 .about-hero-photo {
