@@ -38,7 +38,8 @@
       <section class="section about" aria-label="About Gelo's Catering">
         <div class="about-grid">
           <div>
-            <h3>About Gelo’s Food Catering Services</h3>
+            <h3>Angelo Gabriel Balba</h3>
+            <img src="dp.jpg" alt="dp" class="about-hero-photo">
             <p class="lead">At Gelo’s, we believe every event deserves exceptional food and impeccable service. Our team crafts menus that reflect your taste and occasion—be it a wedding, corporate event, or private celebration.</p>
             <p>Led by Chef Gelo, our staff emphasizes fresh ingredients, elegant presentation, and reliable execution. We work closely with clients from tasting to cleanup, ensuring a seamless experience.</p>
           </div>
