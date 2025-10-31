@@ -407,53 +407,42 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
+  /* ---------- Responsive Hero ---------- */
   .hero {
-    height: clamp(280px, 45vh, 400px); /* slightly taller for readability */
-    padding: 1rem;
+    height: clamp(260px, 45vh, 380px);
   }
 
   .hero-content {
     max-width: 90%;
   }
 
-  .hero-content h2 {
-    font-size: 1.8rem;
-    line-height: 1.2;
+  .hero h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
   }
 
-  .hero-content p {
-    font-size: 1rem;
+  .hero p {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
   }
 }
 
 @media (max-width: 600px) {
-  main {
-    padding: 1rem;
-  }
-
-  nav button {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-  }
-
   .hero {
     height: 250px;
-    background-position: center top;
+    background-position: top center;
   }
 
   .hero-content {
     max-width: 95%;
-    padding: 0.5rem 1rem;
   }
 
-  .hero-content h2 {
+  .hero h2 {
     font-size: 1.5rem;
-    line-height: 1.2;
   }
 
-  .hero-content p {
+  .hero p {
     font-size: 0.95rem;
   }
+}
 
   .service-card,
   .package {
@@ -463,4 +452,3 @@ footer a:hover {
   .gallery-grid img {
     height: 150px;
   }
-}
