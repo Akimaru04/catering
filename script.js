@@ -62,34 +62,44 @@
     `,
 
     packages: `
-      <section class="section" aria-label="Packages">
-        <h3>Catering Packages</h3>
-        <p class="lead">Transparent packages to fit common event sizes—each can be tailored on request.</p>
+  <section class="section packages-section" aria-label="Catering Packages">
+    <h2 class="section-title">Catering Packages</h2>
+    <p class="lead">
+      Transparent packages to fit different event sizes — each can be customized upon request.
+    </p>
 
-        <div class="packages-grid" style="margin-top:14px;">
-          <div class="package">
-            <h4>Silver Package</h4>
-            <div class="price">Starting at ₱350 / pax</div>
-            <p>Buffet-style selection of 4 entrees, 2 sides, dessert, and beverage station. Ideal for small events.</p>
-            <div style="margin-top:12px;"><button class="btn-primary inquire-btn" data-package="Silver">Inquire</button></div>
-          </div>
+    <div class="packages-grid">
+      <div class="package">
+        <h3>Silver Package</h3>
+        <div class="price">₱350 / pax</div>
+        <p>
+          Buffet-style selection of 4 entrees, 2 sides, dessert, and beverage station.
+          Ideal for small events.
+        </p>
+        <button class="btn-primary inquire-btn" data-package="Silver">Inquire</button>
+      </div>
 
-          <div class="package">
-            <h4>Gold Package</h4>
-            <div class="price">Starting at ₱520 / pax</div>
-            <p>Expanded menu with plated course options, dessert table, and dedicated service staff.</p>
-            <div style="margin-top:12px;"><button class="btn-primary inquire-btn" data-package="Gold">Inquire</button></div>
-          </div>
+      <div class="package">
+        <h3>Gold Package</h3>
+        <div class="price">₱520 / pax</div>
+        <p>
+          Expanded menu with plated course options, dessert table, and dedicated service staff.
+        </p>
+        <button class="btn-primary inquire-btn" data-package="Gold">Inquire</button>
+      </div>
 
-          <div class="package">
-            <h4>Platinum Package</h4>
-            <div class="price">Starting at ₱800 / pax</div>
-            <p>Full-service offering with premium ingredients, menu tasting, event coordinator, and plated service.</p>
-            <div style="margin-top:12px;"><button class="btn-primary inquire-btn" data-package="Platinum">Inquire</button></div>
-          </div>
-        </div>
-      </section>
-    `,
+      <div class="package">
+        <h3>Platinum Package</h3>
+        <div class="price">₱800 / pax</div>
+        <p>
+          Full-service offering with premium ingredients, menu tasting, event coordinator, and plated service.
+        </p>
+        <button class="btn-primary inquire-btn" data-package="Platinum">Inquire</button>
+      </div>
+    </div>
+  </section>
+`,
+
 
     gallery: `
       <section class="section" aria-label="Gallery">
