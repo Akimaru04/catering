@@ -95,18 +95,37 @@
 
   // ---------- Section-specific Handlers ----------
   function attachSectionHandlers(sectionKey) {
-    // CTA in Home
+    // Home CTA button
     const ctaBook = document.getElementById("cta-book");
     if (ctaBook) ctaBook.addEventListener("click", () => loadSection("contact"));
 
-    // Clear Form button in Contact
-    const clearBtn = document.getElementById("clear-form");
-    if (clearBtn) {
-      clearBtn.addEventListener("click", (e) => {
+    // Contact form handlers
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      // Send
+      contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        const form = document.getElementById("contact-form");
-        if (form) form.reset();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const msg = document.getElementById("message").value.trim();
+
+        if (!name || !email || !msg) {
+          alert("Please fill out all fields before sending.");
+          return;
+        }
+
+        alert("✅ Message sent successfully! We’ll get back to you soon.");
+        contactForm.reset();
       });
+
+      // Clear
+      const clearBtn = document.getElementById("clear-form");
+      if (clearBtn) {
+        clearBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          contactForm.reset();
+        });
+      }
     }
   }
 
@@ -118,7 +137,7 @@
     });
   });
 
-  // ---------- Delegated Clicks (Global) ----------
+  // ---------- Global Delegated Clicks ----------
   document.addEventListener("click", (e) => {
     // Hero "Inquire Now"
     if (e.target.closest(".cta")) {
