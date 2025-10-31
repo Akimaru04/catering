@@ -408,41 +408,97 @@ footer a:hover {
   }
 
   /* ---------- Responsive Hero ---------- */
-  .hero {
-    height: clamp(260px, 45vh, 380px);
-  }
-
-  .hero-content {
-    max-width: 90%;
-  }
-
-  .hero h2 {
-    font-size: clamp(1.6rem, 5vw, 2.2rem);
-  }
-
-  .hero p {
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
-  }
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+  height: clamp(280px, 50vh, 420px);
+  padding: 0 1rem;
 }
 
-@media (max-width: 600px) {
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  color: #1f3b63;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  color: #2c2c2c;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Hero button */
+.hero button {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(245,177,76,0.25);
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245,177,76,0.35);
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
   .hero {
-    height: 250px;
-    background-position: top center;
+    height: 320px;
+    background-position: center top;
   }
 
-  .hero-content {
-    max-width: 95%;
-  }
-
-  .hero h2 {
+  .hero-content h2 {
     font-size: 1.5rem;
   }
 
-  .hero p {
+  .hero-content p {
     font-size: 0.95rem;
   }
+
+  .hero button {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    height: 280px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero button {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
 
   .service-card,
   .package {
@@ -452,3 +508,4 @@ footer a:hover {
   .gallery-grid img {
     height: 150px;
   }
+}
