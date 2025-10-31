@@ -94,7 +94,7 @@
     gallery: `
       <section class="section" aria-label="Gallery">
         <h3>Gallery</h3>
-        <p class="lead">A selection of events and setups—replace these with your real photos later.</p>
+        <p class="lead">A selection of events and setups</p>
         <div class="gallery-grid" style="margin-top:12px;">
           <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60" alt="Event setup 1">
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=60" alt="Event setup 2">
