@@ -13,11 +13,13 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth; /* ✅ smoother scroll transitions */
+  scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -45,19 +47,28 @@ body {
   top: 0;
   z-index: 999;
 }
+
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 0;
-  flex-wrap: wrap; /* ✅ allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .brand .site-title {
   font-family: 'Playfair Display', serif;
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0.6px;
 }
+
 .brand .tagline {
   margin: 2px 0 0;
   font-size: 12px;
@@ -71,6 +82,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+
 .nav-btn {
   background: transparent;
   color: #fff;
@@ -82,6 +94,7 @@ body {
   font-size: 14px;
   transition: all 0.18s ease;
 }
+
 .nav-btn:hover,
 .nav-btn.active {
   background: var(--gold);
@@ -110,6 +123,7 @@ main#content {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(31, 59, 99, 0.08);
 }
+
 .hero .hero-bg {
   position: relative;
   height: 420px;
@@ -120,28 +134,33 @@ main#content {
   align-items: center;
   justify-content: center;
 }
+
 .hero .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(31, 59, 99, 0.42), rgba(31, 59, 99, 0.6));
 }
+
 .hero .hero-inner {
   position: relative;
   z-index: 2;
   text-align: center;
   padding: 48px 20px;
 }
+
 .hero h2 {
   margin: 0 0 10px;
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   letter-spacing: 0.6px;
 }
+
 .hero p.lead {
   margin: 0 0 20px;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.95);
 }
+
 .hero .cta {
   background: var(--gold);
   color: var(--navy);
@@ -153,6 +172,7 @@ main#content {
   box-shadow: 0 8px 24px rgba(245, 177, 76, 0.12);
   transition: transform 0.15s ease;
 }
+
 .hero .cta:hover {
   transform: translateY(-3px);
 }
@@ -164,15 +184,18 @@ main#content {
   border-radius: 12px;
   box-shadow: 0 6px 20px var(--card-shadow);
 }
+
 .section + .section {
   margin-top: 22px;
 }
+
 .section h3 {
   font-family: 'Playfair Display', serif;
   margin: 0 0 8px;
   color: var(--navy);
   font-size: 22px;
 }
+
 .section p.lead {
   margin: 0 0 14px;
   color: var(--muted);
@@ -185,8 +208,9 @@ main#content {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  text-align: center; /* ✅ center text on smaller screens */
+  text-align: center;
 }
+
 .about-hero-photo {
   width: 260px;
   height: 260px;
@@ -195,6 +219,7 @@ main#content {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
   border: 4px solid var(--gold);
 }
+
 .about-text {
   max-width: 650px;
   text-align: left;
@@ -206,19 +231,22 @@ main#content {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
+
 .service-card {
   padding: 18px;
   border-radius: 10px;
-  background: linear-gradient(180deg, #fff, #fff);
+  background: #fff;
   border: 1px solid rgba(31, 59, 99, 0.04);
   box-shadow: 0 6px 18px rgba(31, 59, 99, 0.04);
 }
+
 .service-card h4 {
   margin: 0 0 6px;
   font-size: 18px;
   color: var(--navy);
   font-family: 'Playfair Display';
 }
+
 .service-card p {
   margin: 0;
   color: var(--muted);
@@ -231,6 +259,7 @@ main#content {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
+
 .package {
   padding: 18px;
   border-radius: 10px;
@@ -238,11 +267,13 @@ main#content {
   background: #fff;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.03);
 }
+
 .package h4 {
   margin: 0 0 6px;
   font-family: 'Playfair Display';
   color: var(--navy);
 }
+
 .package .price {
   font-weight: 700;
   color: var(--gold);
@@ -255,6 +286,7 @@ main#content {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
 }
+
 .gallery-grid img {
   width: 100%;
   height: 140px;
@@ -263,6 +295,7 @@ main#content {
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
+
 .gallery-grid img:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -274,21 +307,25 @@ main#content {
   grid-template-columns: 1fr 360px;
   gap: 20px;
 }
+
 .contact-card {
   padding: 18px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
+
 .form-field {
   margin-bottom: 12px;
 }
+
 .form-field label {
   display: block;
   font-size: 13px;
   margin-bottom: 6px;
   color: var(--muted);
 }
+
 .form-field input,
 .form-field textarea {
   width: 100%;
@@ -298,6 +335,7 @@ main#content {
   font-size: 14px;
   font-family: inherit;
 }
+
 .btn-primary {
   background: var(--navy);
   color: #fff;
@@ -307,9 +345,11 @@ main#content {
   cursor: pointer;
   font-weight: 700;
 }
+
 .btn-primary:hover {
-  background: #274b7d; /* ✅ slight hover contrast */
+  background: #274b7d;
 }
+
 .btn-ghost {
   background: transparent;
   color: var(--navy);
@@ -326,6 +366,7 @@ main#content {
   color: #fff;
   padding: 18px 20px;
 }
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -333,80 +374,98 @@ main#content {
   gap: 12px;
   max-width: 1100px;
   margin: 0 auto;
-  flex-wrap: wrap; /* ✅ avoid overflow on mobile */
+  flex-wrap: wrap;
 }
+
 .site-footer a {
   color: #fff;
   text-decoration: underline;
 }
+
 .credit {
   max-width: 1100px;
   margin: 12px auto 0;
   padding: 0 20px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.85);
-  text-align: center; /* ✅ center on small screens */
+  text-align: center;
 }
 
-/* Fade transitions (used by JS) */
+/* Fade transitions */
 .fade {
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.32s ease, transform 0.32s ease;
 }
+
 .fade.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ✅ Responsive Fixes */
+/* Responsive Adjustments */
 @media (max-width: 880px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .brand .site-title {
+    font-size: 20px;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 6px;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
   .about-container {
     flex-direction: column;
   }
+
   .about-text {
     text-align: center;
   }
-  .header-inner {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    padding: 12px 0;
-  }
-  .main-nav {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+
   .hero .hero-bg {
     height: 320px;
   }
+
   .hero h2 {
     font-size: 26px;
   }
+
   .hero p.lead {
     font-size: 14px;
   }
 }
 
 @media (max-width: 500px) {
-  .hero .hero-bg {
-    height: 280px;
-  }
   .nav-btn {
     font-size: 13px;
     padding: 6px 10px;
   }
+
   .section {
     padding: 20px;
   }
+
+  .hero .hero-bg {
+    height: 280px;
+  }
+
   .service-card p,
   .package p {
     font-size: 13px;
   }
+
   .gallery-grid img {
     height: 120px;
   }
