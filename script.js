@@ -179,6 +179,44 @@
     });
   });
 
+  document.addEventListener("click", (e) => {
+  // --- Hero "Inquire Now" button ---
+  if (e.target.closest(".cta")) {
+    e.preventDefault();
+
+    if (typeof loadSection === "function") {
+      loadSection("contact");
+    }
+
+    setTimeout(() => {
+      const messageField = document.querySelector("#message");
+      if (messageField) {
+        messageField.value = "Hello! I would like to inquire about your catering services.";
+        messageField.focus();
+      }
+    }, 400);
+  }
+
+  // --- Package "Inquire" buttons ---
+  if (e.target.closest(".inquire-btn")) {
+    e.preventDefault();
+    const pkg = e.target.getAttribute("data-package") || "Catering";
+
+    if (typeof loadSection === "function") {
+      loadSection("contact");
+    }
+
+    setTimeout(() => {
+      const messageField = document.querySelector("#message");
+      if (messageField) {
+        messageField.value = `Hi! I'm interested in your ${pkg} Package. Please send me more details.`;
+        messageField.focus();
+      }
+    }, 400);
+  }
+});
+
+
   // ---------- Init ----------
   loadSection('home');
 })();
