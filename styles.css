@@ -89,64 +89,41 @@ nav button.active {
   box-shadow: 0 6px 12px rgba(245, 177, 76, 0.25);
 }
 
-/* ---------- Hero Section ---------- */
-.hero {
-  position: relative;
-  height: clamp(280px, 45vh, 460px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80")
-    center/cover no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 26, 48, 0.55);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 1.5rem;
-}
-
-.hero-content h2 {
+/* ---------- Hero Section (Readable with Dark Text) ---------- */
+.hero h2 {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
-  color: #fff8e7;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  color: #1f3b63; /* navy from your theme for strong contrast */
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3); /* subtle glow for slight separation */
 }
 
-.hero-content p {
-  color: rgba(255, 255, 255, 0.92);
+.hero p {
+  color: #2c2c2c; /* dark muted text for readability */
   font-size: clamp(0.9rem, 2vw, 1rem);
-  max-width: 600px;
-  margin: 0.6rem auto 1.6rem;
+  margin: 0.6rem 0 1.6rem;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.2); /* soft subtle text glow */
 }
 
+/* Keep buttons vibrant */
 .hero button {
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   color: var(--navy);
   border: none;
   padding: 0.8rem 1.6rem;
   font-weight: 700;
-  font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
+  box-shadow: 0 6px 14px rgba(245,177,76,0.3);
   transition: all 0.3s ease;
 }
 
 .hero button:hover {
-  background: var(--gold-dark);
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: #fff;
   transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(245, 177, 76, 0.4);
+  box-shadow: 0 10px 24px rgba(245,177,76,0.4);
 }
+
 
 /* ---------- Main Sections ---------- */
 main {
@@ -176,37 +153,49 @@ main {
   line-height: 1.7;
 }
 
-/* ---------- Buttons ---------- */
-.btn,
-button.btn-primary {
-  display: inline-block;
-  background: var(--navy);
-  color: #fff;
+/* ---------- Primary Buttons ---------- */
+button.btn-primary,
+.btn {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
   border: none;
-  padding: 0.75rem 1.4rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.25s ease;
-  font-size: 0.95rem;
+  box-shadow: 0 6px 14px rgba(245,177,76,0.3);
+  transition: all 0.3s ease;
 }
 
-.btn:hover,
-button.btn-primary:hover {
-  background: #162d4f;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(31, 59, 99, 0.25);
+button.btn-primary:hover,
+.btn:hover {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(245,177,76,0.4);
 }
 
-/* Secondary (outline) style */
-.btn-outline {
+/* ---------- Outline / Ghost Buttons ---------- */
+.btn-outline,
+button.btn-ghost {
   background: transparent;
   color: var(--navy);
   border: 2px solid var(--navy);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.btn-outline:hover {
+
+.btn-outline:hover,
+button.btn-ghost:hover {
   background: var(--navy);
   color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(31,59,99,0.25);
 }
 
 /* ---------- Services Section ---------- */
@@ -295,6 +284,41 @@ button.btn-primary:hover {
   gap: 1.4rem;
   margin-top: 1.5rem;
 }
+
+/* Contact Form Buttons */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center align on all devices */
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.contact-buttons button {
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button[type="reset"] {
+  background: linear-gradient(135deg, #f5b14c, #f7c67b);
+  color: var(--navy);
+  border: 2px solid #f5b14c;
+  box-shadow: 0 4px 10px rgba(245, 177, 76, 0.25);
+}
+button[type="reset"]:hover {
+  background: linear-gradient(135deg, #f7c67b, #f5b14c);
+  color: #fff;
+  border-color: #f5b14c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(245, 177, 76, 0.35);
+}
+
+
 
 .form-field {
   margin-bottom: 1rem;

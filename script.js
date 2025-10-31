@@ -147,8 +147,8 @@
 
           <div class="contact-card">
             <h4>Contact Info</h4>
-            <p class="small">Phone: <a href="tel:+639000000000">+63 900 000 0000</a></p>
-            <p class="small">Email: <a href="mailto:info@geloscatering.com">info@geloscatering.com</a></p>
+            <p class="small">Phone: <a href="tel:+639241026432">+63 924 102 6432</a></p>
+            <p class="small">Email: <a href="mailto:balbaangelogabriel@gmail.com">balbaangelogabriel@gmail.com</a></p>
             <p class="small">We provide tastings by appointment. Locations and full menus available on request.</p>
             <div style="margin-top:12px;">
               <button class="btn-primary" id="book-cta">Request a Tasting</button>
