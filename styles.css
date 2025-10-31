@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Header */
 header {
   background-color: #fff;
   padding: 12px 20px;
@@ -23,10 +24,11 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #c46b29;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 /* Navigation */
@@ -63,12 +65,14 @@ header h1 {
   text-align: center;
 }
 
+/* Hero Section */
 .hero {
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('images/hero.jpg') center/cover no-repeat;
   color: #fff;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
   border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
 .hero h1 {
@@ -79,21 +83,23 @@ header h1 {
 .hero p {
   font-size: 1.2rem;
   margin: 10px 0 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
 .cta {
   background-color: #c46b29;
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 28px;
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .cta:hover {
   background-color: #e07b32;
+  transform: translateY(-2px);
 }
 
 /* Services */
@@ -158,6 +164,27 @@ header h1 {
   background-color: #e07b32;
 }
 
+/* Gallery Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* Contact Form */
 #contact-form {
   max-width: 600px;
@@ -166,6 +193,10 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 #contact-form label {
@@ -231,13 +262,25 @@ header h1 {
 
 /* Responsive */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
   .hero {
-    padding: 70px 15px;
+    padding: 80px 15px;
   }
+
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-  .packages-grid, .service-grid {
+
+  .packages-grid,
+  .service-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  #contact-form {
+    padding: 20px;
   }
 }
